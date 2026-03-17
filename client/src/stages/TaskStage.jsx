@@ -23,7 +23,7 @@ export function TaskStage() {
     }
 
     const chatUrl = [
-        'http://localhost:5173',
+        'https://diss-chat-mas.s3-website.eu-north-1.amazonaws.com:5173',
         '?participantID=' + player.id,
         '&groupID=' + game.id,
         '&scenario=' + scenario,

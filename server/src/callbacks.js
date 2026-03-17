@@ -26,6 +26,12 @@ Empirica.onGameStart(({ game }) => {
       name: "task",
       duration: 120
     });
+    if (i === 0) {
+      round.addStage({
+        name: "between-rounds",
+        duration: 60  // 60 seconds to read, or set higher
+      });
+    }
   });
 
   game.players.forEach((player, i) => {

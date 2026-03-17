@@ -1,16 +1,17 @@
 import {
   usePlayer,
   usePlayers,
-  useRound,
+  useRound, useStage,
 } from "@empirica/core/player/classic/react";
 import { Loading } from "@empirica/core/player/react";
 import React from "react";
 import { TaskStage } from "./stages/TaskStage";
+import {TaskTransition} from "./stages/TaskTransition.jsx";
 
 export function Stage() {
   const player = usePlayer();
   const players = usePlayers();
-  const round = useRound();
+  const stage = useStage();
 
   if (player.stage.get("submit")) {
     if (players.length === 1) {
@@ -23,6 +24,13 @@ export function Stage() {
         </div>
     );
   }
-  console.log("round task value:", round.get("task"));
-  return <TaskStage />;
+
+  switch (stage.get("name")) {
+    case "task":
+      return <TaskStage />;
+    case "between-rounds":
+      return <TaskTransition />;
+    default:
+      return <div>Unknown stage</div>;
+  }
 }

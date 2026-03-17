@@ -6,6 +6,7 @@ import { Game } from "./Game";
 import { ExitSurvey } from "./intro-exit/ExitSurvey";
 import { Introduction } from "./intro-exit/Introduction";
 import {TaskStage} from "./stages/TaskStage";
+import {TaskInstructions} from "./intro-exit/TaskInstructions.jsx";
 
 export default function App() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -15,7 +16,7 @@ export default function App() {
   const url = `${protocol}//${host}/query`;
 
   function introSteps({ game, player }) {
-    return [Introduction];
+    return [Introduction, TaskInstructions];
   }
 
   function exitSteps({ game, player }) {
