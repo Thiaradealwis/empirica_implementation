@@ -51,7 +51,7 @@ export function TaskStage() {
                     title='Discussion Chat'
                 />
             </div>
-            <ReadyButton />
+            <ReadyButton player={player} next={next}/>
         </div>
     );
 }
