@@ -1,26 +1,19 @@
-import { useGame, useStage } from "@empirica/core/player/classic/react";
+import {useGame, usePlayers, useStage} from "@empirica/core/player/classic/react";
 import { useState } from "react";
 
 export default function ReadyButton({ player }) {
     const stage = useStage();
     const game = useGame();
+    const players = usePlayers();
     const [clicked, setClicked] = useState(false);
 
     const handleClick = () => {
         if (!clicked) {
             setClicked(true);
             // mark this player as ready
-            player.set("readyToNextStage", true);
+            player.stage.set("submit", true);
         }
     };
-
-    // check if everyone is ready
-    const allReady = game.players.every(p => p.get("readyToNextStage"));
-
-    // optionally auto-end stage if everyone ready
-    if (allReady && stage.isActive) {
-        stage.end();
-    }
 
     return (
         <button onClick={handleClick} disabled={clicked}>
