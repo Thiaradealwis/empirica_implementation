@@ -36,7 +36,7 @@ export function TaskStage() {
     const roleKey = 'role' + role;
 
     return (
-        <div style={{display: 'flex', height: '90vh', gap: '12px', padding: '12px'}}>
+        <div style={{width: '90%', display: 'flex', height: '90vh', gap: '5px', padding: '12px'}}>
             <div style={{width: '40%', overflowY: 'auto', padding: '1.5rem', background: '#f8f9fa', borderRadius: '8px', border: '1px solid #dee2e6'}}>
                 <h2>Your Task Information</h2>
                 <h3>Shared Information</h3>
@@ -44,14 +44,16 @@ export function TaskStage() {
                 <h3>Your Private Information</h3>
                 <p>{content[roleKey]}</p>
             </div>
-            <div style={{width: '60%'}}>
-                <iframe
-                    src={chatUrl}
-                    style={{width: '100%', height: '100%', border: 'none', borderRadius: '8px'}}
-                    title='Discussion Chat'
-                />
+            <div style={{width: '100%', display: 'flex', flexDirection: 'column'}}>
+                <div style={{width: '100%'}}>
+                    <iframe
+                        src={chatUrl}
+                        style={{width: '100%', height: '100%', border: 'none', borderRadius: '8px'}}
+                        title='Discussion Chat'
+                    />
+                </div>
+                <ReadyButton player={player} />
             </div>
-            <ReadyButton player={player} />
         </div>
     );
 }
