@@ -11,31 +11,14 @@ function getConditionKey(cond) {
   return `${cond.scenarioOrder.join("")}_${cond.mediator.join("")}`;
 }
 
-function getAllConditionKeys() {
-  return CONDITIONS.map(getConditionKey);
-}
+let conditionCounts = {};
 
-let conditionIndex = 0;
-
-Empirica.on("batch", "start", ({ batch }) => {
-  batch.set("groupByArrivalTime", true);
-  const counts = {};
-  CONDITIONS.forEach(cond => {
-    counts[getConditionKey(cond)] = 0;
-  });
-
-  batch.set("conditionCounts", counts);
-
+CONDITIONS.forEach(cond => {
+  conditionCounts[getConditionKey(cond)] = 0;
 });
 
 Empirica.onGameStart(({ game, batch }) => {
-  let counts = batch.get("conditionCounts");
-  if (!counts) {
-    counts = {};
-    CONDITIONS.forEach(cond => {
-      counts[getConditionKey(cond)] = 0;
-    });
-  }
+  const counts = conditionCounts; // global counts object
 
   let minCount = Infinity;
   let lowestCandidates = [];
@@ -84,23 +67,15 @@ Empirica.onGameStart(({ game, batch }) => {
 });
 
 Empirica.onGameEnded(({ game, batch }) => {
-  let counts = batch.get("conditionCounts") || {};
-
-  const conditionKey = game.get("conditionKey");
+  const key = game.get("conditionKey");
+  if (!key) return;
 
   const rounds = game.rounds || [];
   const completed = rounds.length > 0 && rounds.every(r => r.hasEnded);
 
-  if (!completed) {
-    console.log("Game not completed, not counting condition.");
-    return;
-  }
+  if (!completed) return;
 
-  // Increment count
-  counts[conditionKey] = (counts[conditionKey] || 0) + 1;
-
-  batch.set("conditionCounts", counts);
-
-  console.log("Updated condition counts:", counts);
+  conditionCounts[key] = (conditionCounts[key] || 0) + 1;
+  console.log("Updated counts:", conditionCounts);
 });
 
