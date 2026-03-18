@@ -23,7 +23,7 @@ export default defineConfig({
     strictPort: true,
     host: "0.0.0.0",
     hmr: {
-      host: "localhost",
+      host: "13.62.133.82",
       protocol: "ws",
       port: 8844,
     },
