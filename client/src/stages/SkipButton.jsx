@@ -1,7 +1,7 @@
 import {useGame, usePlayers, useStage} from "@empirica/core/player/classic/react";
 import { useState } from "react";
 
-export default function ReadyButton({ player, next }) {
+export default function ReadyButton({ player}) {
     const stage = useStage();
     const game = useGame();
     const players = usePlayers();
