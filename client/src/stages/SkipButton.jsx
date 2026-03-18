@@ -1,4 +1,4 @@
-import { useGame, useStage } from "@empirica/core/react";
+import { useGame, useStage } from "@empirica/core/player/classic/react";
 import { useState } from "react";
 
 export default function ReadyButton({ player }) {
