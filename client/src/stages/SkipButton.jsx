@@ -21,8 +21,8 @@ export default function ReadyButton({ player, next }) {
         : false;
 
     // move to next step for all players
-    if (allReady && next) {
-        next();
+    if (allReady) {
+        player.stage.set("submit", true);
     }
 
     return (
