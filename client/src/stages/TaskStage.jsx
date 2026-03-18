@@ -1,5 +1,6 @@
 import { usePlayer, useRound, useGame } from "@empirica/core/player/classic/react";
 import { SCENARIO_TEXT } from "../scenarioContent";
+import ReadyButton from "./SkipButton.jsx";
 
 export function TaskStage() {
     const player = usePlayer();
@@ -50,6 +51,7 @@ export function TaskStage() {
                     title='Discussion Chat'
                 />
             </div>
+            <ReadyButton />
         </div>
     );
 }
