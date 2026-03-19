@@ -38,6 +38,9 @@ export function TaskStage() {
     return (
         <div style={{width: '90%', display: 'flex', height: '90vh', gap: '5px', padding: '12px'}}>
             <div style={{width: '40%', overflowY: 'auto', padding: '1.5rem', background: '#f8f9fa', borderRadius: '8px', border: '1px solid #dee2e6'}}>
+                {mediatorOn ? (<h2>During this discussion you will have access to a mediator who may intervene at any point. If you wish to talk to the mediator directly please include '@mediator' in your message</h2>)
+                :
+                    (<h2>During this discussion there will be no mediator present. Please carry out the task as below.</h2>)}
                 <h2>Your Task Information</h2>
                 <h3>Shared Information</h3>
                 <p>{content.shared}</p>
