@@ -43,8 +43,8 @@ export function TaskStage() {
                 :
                     (<h2>During this discussion there will be no mediator present. Please carry out the task as below.</h2>)}
                 <h2>Your Task Information</h2>
-                <p>{content.shared}</p>
-                <p>{content[roleKey]}</p>
+                <p style={{ whiteSpace: 'pre-wrap' }}>{content.shared}</p>
+                <p style={{ whiteSpace: 'pre-wrap' }}>{content[roleKey]}</p>
             </div>
             <div style={{width: '100%', display: 'flex', flexDirection: 'column'}}>
                 <div style={{width: '100%', height: '95%'}}>
