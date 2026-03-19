@@ -2,4 +2,4 @@ lobbies:
   - name: Groups of 3
     kind: shared
     duration: 1h
-    strategy: block
+    strategy: fail
