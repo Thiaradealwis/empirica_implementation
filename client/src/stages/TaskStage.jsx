@@ -45,7 +45,7 @@ export function TaskStage() {
                 <p>{content[roleKey]}</p>
             </div>
             <div style={{width: '100%', display: 'flex', flexDirection: 'column'}}>
-                <div style={{width: '100%'}}>
+                <div style={{width: '100%', height: '95%'}}>
                     <iframe
                         src={chatUrl}
                         style={{width: '100%', height: '100%', border: 'none', borderRadius: '8px'}}
