@@ -29,6 +29,9 @@ export function Stage() {
     case "task":
       return <TaskStage />;
     case "between-rounds":
+      players.forEach((player) => {
+        player.stage.set("submit", false);
+      })
       return <TaskTransition />;
     default:
       return <div>Unknown stage</div>;
