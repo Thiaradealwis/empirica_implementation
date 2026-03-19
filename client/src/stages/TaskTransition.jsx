@@ -8,9 +8,9 @@ export function TaskTransition({ }) {
     return (
         <div style={{ maxWidth: '600px', margin: '0 auto', padding: '2rem' }}>
             <h1>Round 1 Complete</h1>
-            <p>Well done — you have completed the first discussion.</p>
+            <p>Thank you for completing the first task.</p>
             <h2>Next Task</h2>
-            <p>You are about to begin the second discussion. This time the scenario will be different...</p>
+            <p>The second task will begin shortly. This time the scenario will be different...</p>
             {/* add whatever info you want here */}
             <p style={{ color: '#666', fontStyle: 'italic' }}>
                 The next round will begin automatically in a moment.
