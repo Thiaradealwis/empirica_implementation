@@ -34,172 +34,34 @@ export function ExitSurvey({ next }) {
   }
 
   return (
-    <div className="py-8 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <Alert title="Bonus">
-        <p>
-          Please submit the following code to receive your bonus:{" "}
-          <strong>{player.id}</strong>.
-        </p>
-        <p className="pt-1">
-          Your final <strong>bonus</strong> is in addition of the{" "}
-          <strong>1 base reward</strong> for completing the HIT.
-        </p>
-      </Alert>
+      <div style={{maxWidth: '800px', margin: '0 auto', padding: '2rem'}}>
+        <h1>Exit Survey</h1>
+        <p>Please complete the survey below before finishing.</p>
 
-      <form
-        className="mt-12 space-y-8 divide-y divide-gray-200"
-        onSubmit={handleSubmit}
-      >
-        <div className="space-y-8 divide-y divide-gray-200">
-          <div>
-            <div>
-              <h3 className="text-lg leading-6 font-medium text-gray-900">
-                Exit Survey
-              </h3>
-              <p className="mt-1 text-sm text-gray-500">
-                Please answer the following short survey. You do not have to
-                provide any information you feel uncomfortable with.
-              </p>
-            </div>
+        <iframe
+            src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=MH_ksn3NTkql2rGM8aQVG-tihBA1rupNjYA3OGj3xU1UQkVTTlVZNFpRV0c3UkdRNTExS1RSODJMOS4u"
+            width="100%"
+            height="600px"
+            style={{border: 'none', borderRadius: '8px', marginBottom: '1.5rem'}}
+            title="Consent Form"
+        />
 
-            <div className="space-y-8 mt-6">
-              <div className="flex flex-row">
-                <div>
-                  <label htmlFor="email" className={labelClassName}>
-                    Age
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      id="age"
-                      name="age"
-                      type="number"
-                      autoComplete="off"
-                      className={inputClassName}
-                      value={age}
-                      onChange={(e) => setAge(e.target.value)}
-                    />
-                  </div>
-                </div>
-                <div className="ml-5">
-                  <label htmlFor="email" className={labelClassName}>
-                    Gender
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      id="gender"
-                      name="gender"
-                      autoComplete="off"
-                      className={inputClassName}
-                      value={gender}
-                      onChange={(e) => setGender(e.target.value)}
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <label className={labelClassName}>
-                  Highest Education Qualification
-                </label>
-                <div className="grid gap-2">
-                  <Radio
-                    selected={education}
-                    name="education"
-                    value="high-school"
-                    label="High School"
-                    onChange={handleEducationChange}
-                  />
-                  <Radio
-                    selected={education}
-                    name="education"
-                    value="bachelor"
-                    label="US Bachelor's Degree"
-                    onChange={handleEducationChange}
-                  />
-                  <Radio
-                    selected={education}
-                    name="education"
-                    value="master"
-                    label="Master's or higher"
-                    onChange={handleEducationChange}
-                  />
-                  <Radio
-                    selected={education}
-                    name="education"
-                    value="other"
-                    label="Other"
-                    onChange={handleEducationChange}
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-3 gap-x-6 gap-y-3">
-                <label className={labelClassName}>
-                  How would you describe your strength in the game?
-                </label>
-
-                <label className={labelClassName}>
-                  Do you feel the pay was fair?
-                </label>
-
-                <label className={labelClassName}>
-                  Feedback, including problems you encountered.
-                </label>
-
-                <textarea
-                  className={inputClassName}
-                  dir="auto"
-                  id="strength"
-                  name="strength"
-                  rows={4}
-                  value={strength}
-                  onChange={(e) => setStrength(e.target.value)}
-                />
-
-                <textarea
-                  className={inputClassName}
-                  dir="auto"
-                  id="fair"
-                  name="fair"
-                  rows={4}
-                  value={fair}
-                  onChange={(e) => setFair(e.target.value)}
-                />
-
-                <textarea
-                  className={inputClassName}
-                  dir="auto"
-                  id="feedback"
-                  name="feedback"
-                  rows={4}
-                  value={feedback}
-                  onChange={(e) => setFeedback(e.target.value)}
-                />
-              </div>
-
-              <div className="mb-12">
-                <Button type="submit">Submit</Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </form>
-    </div>
+      </div>
   );
 }
 
-export function Radio({ selected, name, value, label, onChange }) {
+export function Radio({selected, name, value, label, onChange}) {
   return (
-    <label className="text-sm font-medium text-gray-700">
-      <input
-        className="mr-2 shadow-sm sm:text-sm"
-        type="radio"
-        name={name}
-        value={value}
-        checked={selected === value}
-        onChange={onChange}
-      />
-      {label}
-    </label>
+      <label className="text-sm font-medium text-gray-700">
+        <input
+            className="mr-2 shadow-sm sm:text-sm"
+            type="radio"
+            name={name}
+            value={value}
+            checked={selected === value}
+            onChange={onChange}
+        />
+        {label}
+      </label>
   );
 }
