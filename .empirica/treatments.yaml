@@ -1,22 +1,9 @@
 factors:
-    - name: playerCount
-      desc: playerCount determines the number of Players are in a Game.
-      values:
-        - value: 1
-        - value: 2
-        - value: 3
-        - value: 5
-        - value: 8
-        - value: 13
+  - name: playerCount
+    values:
+      - value: 3
+
 treatments:
-    - name: Solo
-      desc: Single-player Game
-      factors:
-        playerCount: 1
-    - name: Two Players
-      desc: Two-player Game
-      factors:
-        playerCount: 2
-    - name: triple
-      factors:
-        playerCount: 3
+  - name: main
+    factors:
+      playerCount: 3
