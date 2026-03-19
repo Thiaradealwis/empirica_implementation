@@ -13,7 +13,7 @@ export default function App() {
   const playerKey = urlParams.get("participantKey") || "";
 
   const { protocol, host } = window.location;
-  const url = "http://13.62.133.82:3000/query";
+  const url = "http://13.63.152.41:3000//query";
 
   function introSteps({ game, player }) {
     return [Introduction, TaskInstructions];
