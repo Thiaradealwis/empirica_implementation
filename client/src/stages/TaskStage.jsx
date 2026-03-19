@@ -18,6 +18,7 @@ export function TaskStage() {
     const scenario = scenarioOrder?.[roundIndex];
     const mediatorOn = mediatorSequence?.[roundIndex];
     const role = player.get('role') || 1;
+    console.log(scenario);
 
     if (!scenario || !SCENARIO_TEXT[scenario]) {
         return <div>Loading... (scenario: {String(scenario)}, roundIndex: {String(roundIndex)})</div>;
