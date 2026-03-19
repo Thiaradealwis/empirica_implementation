@@ -11,19 +11,9 @@ export default function ReadyButton({ player}) {
         if (!clicked) {
             setClicked(true);
             // mark this player as ready
-            player.set("readyToNextStage", true);
+            player.stage.set("submit", true);
         }
     };
-
-    // check if everyone is ready
-    const allReady = players.length > 0
-        ? players.every(p => p.get("readyToNextStage"))
-        : false;
-
-    // move to next step for all players
-    if (allReady) {
-        player.stage.set("submit", true);
-    }
 
     return (
         <button onClick={handleClick} disabled={clicked}>
