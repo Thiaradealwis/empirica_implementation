@@ -32,12 +32,15 @@ export function TaskInstructions({ next }) {
                 <p><strong>Using the system:</strong></p>
                 <p>You will be assigned a colour when you enter the chat system, please try to avoid revealing any
                     personal information about yourself during the discussion.</p>
-                <p>Please do not copy and paste information from your task information pane into the chat.</p>
-                <p>All chat logs will be recorded and stored, all messages are anonymous.</p>
+                <p><strong>Please do not copy and paste </strong>information from your task information pane into the
+                    chat.</p>
+                <br></br>
+                <p>All chat logs will be recorded and stored, all messages are <strong>anonymous</strong>.</p>
                 <p>If, during your task with the AI mediator, you wish to call the mediator, you may do so by including
-                    the tag “@mediator” in your message.</p>
+                    the tag <strong>“@mediator”</strong> in your message.</p>
+                <br></br>
                 <p>If you happen to finish your discussion before the 10 minutes is over, you may move on using the
-                    button marked, “”. Please only press this once you are sure you are all in agreement that you would
+                    button marked, “Ready to Move On”. Please only press this once you are sure you are all in agreement that you would
                     like to move on.</p>
             </div>
 
