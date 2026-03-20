@@ -51,7 +51,7 @@ Empirica.onGameStart(({ game, batch }) => {
 
     round.addStage({
       name: "task",
-      duration: 600
+      duration: 900
     });
     if (i === 0) {
       round.addStage({
