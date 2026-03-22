@@ -39,7 +39,7 @@ export function TaskInstructions({ next }) {
                 <p>If, during your task with the AI mediator, you wish to call the mediator, you may do so by including
                     the tag <strong>“@mediator”</strong> in your message.</p>
                 <br></br>
-                <p>If you happen to finish your discussion before the 10 minutes is over, you may move on using the
+                <p>If you happen to finish your discussion before the 20 minutes is over, you may move on using the
                     button marked, “Ready to Move On”. Please only press this once you are sure you are all in agreement that you would
                     like to move on.</p>
             </div>
