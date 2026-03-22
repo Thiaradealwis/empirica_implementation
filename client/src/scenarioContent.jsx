@@ -50,55 +50,38 @@ export const SCENARIO_TEXT = {
             '- Nobody actually witnessed <b>Eddie</b> working that morning.<br>\n'
     },
     B: {
-        shared: 'The International Sports Federation runs an international event similar to the Olympics every 4 years. Historically, the events have been well received and attracted millions of attendees from around the world. Thorough the years the ISF have worked with partners and sponsors from various industries to bring the event to various cities and cultures.<br> \n' +
+        shared: 'You are participating in a study, acting as an investigator working on a traffic accident.The collision took place at the St. Georges intersection, on Monday at 7 p.m.<br> \n' +
             '\n' +
-            'As one of 3 decision makers at the ISF, you have been asked to sit on a committee to review the options and select the next host city based on reasonable criteria for a large, city-wide sporting event. <br>\n' +
+            'The road is narrow and poorly lit. Two cars and one motorcycle are involved.<br>\n' +
             '\n' +
-            'For the event this year, 3 cities have submitted a bid to host: \n' +
-            '<b>Eldoron</b><br>\n' +
-            '<b>Myloria</b><br>\n' +
-            '<b>Cragnio</b><br>\n' +
+            'Your Task:\n<br>' +
+            'You will discuss with other participants, who are also acting as investigators, to decide who to prosecute.<br>'+
+            'You have four suspects: <br> \n' +
+            '<b>Mr. X</b><br>\n' +
+            '<b>Mr. X\'s son</b><br>\n' +
+            '<b>Mrs Y</b><br>\n' +
+            '<b>Mr Z</b><br>\n' +
             '\n' +
-            'Together, you must choose the best city to host the event. <br>\n',
-        role1: '- Residents of <b>Cragnio</b> have a reputation for being friendly and welcoming of visitors<br>\n' +
-            '- In the past, residents in <b>Cragnio</b> have complained about noise from large events<br>\n' +
-            '- <b>Cragnio’s</b> dry season coincides with the event dates, minimizing risk of rain<br>\n' +
-            '- There are lots of supportive local businesses in <b>Myloria</b><br>\n' +
-            '- The shopping centers in <b>Cragnio</b> are popular with visitors<br>\n' +
-            '- <b>Cragnio</b> has comfortable evening temperatures<br>\n' +
-            '- <b>Myloria</b> hosts a community of volunteers eager to help with the event<br>\n' +
-            '- <b>Eldoron</b> is a popular destination for concerts and conferences<br>\n' +
-            '- <b>Eldoron</b> has been rated as a top tourist destination<br>\n' +
-            '- <b>Myloria</b> has a vibrant nightlife scene to keep visitors entertained<br>\n' +
-            '- <b>Eldoron</b> has a reputation for an easy-to-navigate public transportation experience<br>\n' +
-            '- The Low sun index in <b>Myloria</b> minimizes risk of sunburn<br>\n' +
-            '- The variety of international cuisine in <b>Cragnio</b> may be limited<br>\n',
-        role2: '- Visitors to <b>Myloria</b> occasionally complain about traffic in the city<br>\n' +
-            '- Residents of <b>Cragnio</b> have a reputation for being friendly and welcoming of visitors<br>\n' +
-            '- <b>Eldoron</b> has been rated as a top tourist destination<br>\n' +
-            '- <b>Cragnio</b> has comfortable evening temperatures<br>\n' +
-            '- <b>Myloria</b> hosts a community of volunteers eager to help with the event<br>\n' +
-            '- <b>Myloria</b> has a vibrant nightlife scene to keep visitors entertained<br>\n' +
-            '- The Low sun index in <b>Myloria</b> minimizes risk of sunburn<br>\n' +
-            '- <b>Eldoron</b> is a popular destination for concerts and conferences<br>\n' +
-            '- <b>Cragnio’s</b> dry season coincides with the event dates, minimizing risk of rain<br>\n' +
-            '- The shopping centers in <b>Cragnio</b> are popular with visitors<br>\n' +
-            '- Evenings in <b>Myloria</b> can be warmer than average, causing slight discomfort<br>\n' +
-            '- There are lots of supportive local businesses in <b>Myloria</b><br>\n' +
-            '- <b>Eldoron</b> has dedicated cultural villages for visitors during major events<br>\n',
-        role3: '- Residents of <b>Cragnio</b> have a reputation for being friendly and welcoming of visitors<br>\n' +
-            '- <b>Eldoron</b> has been rated as a top tourist destination<br>\n' +
-            '- The shopping centers in <b>Cragnio</b> are popular with visitors<br>\n' +
-            '- <b>Eldoron</b> has a strong culture of sports and fitness<br>\n' +
-            '- <b>Cragnio</b> has comfortable evening temperatures<br>\n' +
-            '- There are lots of supportive local businesses in <b>Myloria</b><br>\n' +
-            '-<b>Myloria</b> hosts a community of volunteers eager to help with the event<br>\n' +
-            '- <b>Myloria</b> has a vibrant nightlife scene to keep visitors entertained<br>\n' +
-            '- <b>Cragnio’s</b> dry season coincides with the event dates, minimizing risk of rain<br>\n' +
-            '- The Low sun index in <b>Myloria</b> minimizes risk of sunburn<br>\n' +
-            '- <b>Eldoron</b> is a popular destination for concerts and conferences<br>\n' +
-            '- Some visitors to <b>Cragnio</b> with cars complain about parking availability<br>\n' +
-            '- Many people say <b>Eldoron</b> has friendly and welcoming residents<br>\n' +
-            '\n'
+            'There is only one true perpetrator.<br>\n',
+        role1: 'In the first car, <b>Mr. X</b> — who is 53 years old and has held a driving license for 30 years — <b>and his 17-year-old son</b> return home. The father had just drunk several glasses of spirits during a dinner with his friends.<br>\n' +
+            'In the second car, <b>Mrs. Y</b>, 27 years old and having held a driving license for only 1 year, is going shopping. Her car\'s lights are damaged. <br>' +
+            'On the motorcycle, <b>Mr. Z</b>, 28 years old, who has held a driving license for 5 years, is going to meet his sick father who asked him to come rapidly. He is speeding on the N13 road.<br>'+
+            'The guilty person is driving a car. <br>' +
+            'During police inspection, the guilty car owner was discovered to have a 1.5 level of alcohol. <br>'+
+            'The guilty person admits that he was inattentive at the time of the collision.<br>',
+
+        role2: 'In the first car, <b>Mr. X</b> — who is 53 years old and has held a driving license for 30 years — <b>and his 17-year-old son</b> return home. The father had just drunk several glasses of spirits during a dinner with his friends.<br>\n' +
+            'In the second car, <b>Mrs. Y</b>, 27 years old and having held a driving license for only 1 year, is going shopping. Her car\'s lights are damaged. <br>' +
+            'On the motorcycle, <b>Mr. Z</b>, 28 years old, who has held a driving license for 5 years, is going to meet his sick father who asked him to come rapidly. He is speeding on the N13 road.<br>'+
+            'The guilty person is less than 30 years old. <br>'+
+            'Due to inexperience, the guilty person wasn\'t able to avoid the collision. <br>' +
+            'The guilty person claims that he or she did not see others approaching the intersection.<br>',
+
+        role3: 'In the first car, <b>Mr. X</b> — who is 53 years old and has held a driving license for 30 years — <b>and his 17-year-old son</b> return home. The father had just drunk several glasses of spirits during a dinner with his friends.<br>\n' +
+        'In the second car, <b>Mrs. Y</b>, 27 years old and having held a driving license for only 1 year, is going shopping. Her car\'s lights are damaged. <br>' +
+        'On the motorcycle, <b>Mr. Z</b>, 28 years old, who has held a driving license for 5 years, is going to meet his sick father who asked him to come rapidly. He is speeding on the N13 road.<br>'+
+        'The guilty person is a man. <br>' +
+        'His father is indirectly responsible for the accident. <br>' +
+        'The guilty person was driving at 110 km/h'
     }
 };
